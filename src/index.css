@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base: pure white + dark text */
+@layer base {
+  body {
+    @apply bg-white text-accentDark;
+  }
+  /* make all sections & cards transparent */
+  section,
+  .card {
+    background-color: transparent !important;
+  }
+}
