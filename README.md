@@ -58,33 +58,53 @@ A single‐page, responsive portfolio built with **React**, **TypeScript**, **Vi
 ## 📁 Project Structure
 
 my-react-app/
+
 ├── public/
+
 │ ├── index.html
+
 │ ├── icon.png ← navbar logo
+
 │ ├── vitee.png ← favicon
+
 │ └── vite.svg ← (optional)
+
 ├── src/
+
 │ ├── components/
+
 │ │ ├── NavBar.tsx
+
 │ │ ├── Hero.tsx
+
 │ │ ├── Education.tsx
+
 │ │ ├── Experience.tsx
+
 │ │ ├── Projects.tsx
+
 │ │ ├── Skills.tsx
+
 │ │ ├── Contact.tsx
+
 │ │ └── Threads.tsx ← animated canvas background
+
 │ ├── App.tsx
+
 │ ├── main.tsx
+
 │ └── index.css
+
 ├── tailwind.config.js
+
 ├── vite.config.ts
+
 ├── tsconfig.app.json
+
 ├── package.json
+
 └── README.md
 
-yaml
-Copy
-Edit
 
 ---
 
@@ -97,7 +117,7 @@ Edit
 
 ### Installation
 
-```bash
+```
 # Clone the repo
 git clone https://github.com/muneeb-anjum0/YourRepoName.git
 cd YourRepoName
@@ -105,24 +125,17 @@ cd YourRepoName
 # Install dependencies
 npm install
 Running Locally
-bash
-Copy
-Edit
+
 npm run dev
 # Open http://localhost:5173 in your browser
 Building for Production
-bash
-Copy
-Edit
+
 npm run build
 Compiled files will be in dist/.
 
 Deploying to GitHub Pages
 Configure package.json:
 
-json
-Copy
-Edit
 {
   "homepage": "https://muneeb-anjum0.github.io/YourRepoName",
   "scripts": {
@@ -132,15 +145,11 @@ Edit
 }
 Install the deploy helper:
 
-bash
-Copy
-Edit
+
 npm install --save-dev gh-pages
 Run the deploy command:
 
-bash
-Copy
-Edit
+
 npm run deploy
 Enable GitHub Pages (if not auto‐configured):
 
