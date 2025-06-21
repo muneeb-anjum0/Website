@@ -1,54 +1,174 @@
-# React + TypeScript + Vite
+# Muneeb Anjum’s Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single‐page, responsive portfolio built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**, featuring a custom animated “threads” background, smooth scroll navigation, timeline sections for education & experience, a projects showcase, skills badges, and a contact footer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 https://muneeb-anjum0.github.io/YourRepoName/  
+*(Replace `YourRepoName` with your actual GitHub repository name.)*
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🎯 Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Animated “Threads” Background**  
+  5 pairs of pastel‐colored DNA‐style coils on the sides, plus a thick central strand that animates as you scroll.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Responsive Transparent Navbar**  
+  - Transparent, backdrop‐blur header that never hides content behind it  
+  - Word‐only links with elegant hover underline  
+  - Wraps to two rows on small screens to ensure all tabs remain visible  
+  - Smooth scroll to sections via `react-scroll`
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Hero Section**  
+  - Full‐screen welcome message with framer‐motion fade & slide animations
+
+- **Education & Experience Timelines**  
+  - Vertical, stepping timeline  
+  - Alternating cards animate into view on scroll
+
+- **Projects Grid**  
+  - Two‐column layout on tablets/desktops  
+  - Single‐column stack on phones  
+  - Card hover shadows & framer‐motion reveal  
+  - GitHub icons link directly to each repo
+
+- **Skills Badges**  
+  - Clickable, animated badges for core technologies
+
+- **Contact & Footer**  
+  - “Get in Touch” icons link to email, LinkedIn, GitHub  
+  - Opaque, frosted‐glass footer with social icons
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: React 19 + TypeScript  
+- **Bundler**: Vite  
+- **Styling**: Tailwind CSS  
+- **Animation**: Framer Motion  
+- **Smooth Scrolling**: react-scroll  
+- **Icons**: react-icons (FontAwesome)  
+- **Deployment**: GitHub Pages via `gh-pages`
+
+---
+
+## 📁 Project Structure
+
+my-react-app/
+├── public/
+│ ├── index.html
+│ ├── icon.png ← navbar logo
+│ ├── vitee.png ← favicon
+│ └── vite.svg ← (optional)
+├── src/
+│ ├── components/
+│ │ ├── NavBar.tsx
+│ │ ├── Hero.tsx
+│ │ ├── Education.tsx
+│ │ ├── Experience.tsx
+│ │ ├── Projects.tsx
+│ │ ├── Skills.tsx
+│ │ ├── Contact.tsx
+│ │ └── Threads.tsx ← animated canvas background
+│ ├── App.tsx
+│ ├── main.tsx
+│ └── index.css
+├── tailwind.config.js
+├── vite.config.ts
+├── tsconfig.app.json
+├── package.json
+└── README.md
+
+yaml
+Copy
+Edit
+
+---
+
+## 🔧 Getting Started
+
+### Prerequisites
+
+- Node.js v16+ & npm
+- Git
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/muneeb-anjum0/YourRepoName.git
+cd YourRepoName
+
+# Install dependencies
+npm install
+Running Locally
+bash
+Copy
+Edit
+npm run dev
+# Open http://localhost:5173 in your browser
+Building for Production
+bash
+Copy
+Edit
+npm run build
+Compiled files will be in dist/.
+
+Deploying to GitHub Pages
+Configure package.json:
+
+json
+Copy
+Edit
+{
+  "homepage": "https://muneeb-anjum0.github.io/YourRepoName",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy":   "gh-pages -d dist"
+  }
+}
+Install the deploy helper:
+
+bash
+Copy
+Edit
+npm install --save-dev gh-pages
+Run the deploy command:
+
+bash
+Copy
+Edit
+npm run deploy
+Enable GitHub Pages (if not auto‐configured):
+
+Go to Settings → Pages
+
+Select gh-pages branch / root
+
+Your site will be live at the URL above.
+
+✨ Customization
+Colors & Fonts: edit tailwind.config.js under theme.extend
+
+Navigation Links: update sections array in NavBar.tsx
+
+Background Threads: adjust parameters in Threads.tsx
+
+Add Projects: modify the projects array in Projects.tsx
+
+🤝 Contributing
+Feel free to open an issue or PR to suggest improvements or new features.
+
+📄 License
+This project is licensed under the MIT License.
+
+📬 Contact
+Email: muneeb.anjum@hotmail.com
+
+LinkedIn: https://www.linkedin.com/in/muneebanjum335/
+
+GitHub: https://github.com/muneeb-anjum0
