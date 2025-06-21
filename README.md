@@ -7,7 +7,6 @@ A single‐page, responsive portfolio built with **React**, **TypeScript**, **Vi
 ## 🚀 Live Demo
 
 🔗 https://muneeb-anjum0.github.io/website/  
-*(Replace `YourRepoName` with your actual GitHub repository name.)*
 
 ---
 
