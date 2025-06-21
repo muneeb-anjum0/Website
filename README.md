@@ -119,8 +119,8 @@ my-react-app/
 
 ```
 # Clone the repo
-git clone https://github.com/muneeb-anjum0/YourRepoName.git
-cd YourRepoName
+git clone https://github.com/muneeb-anjum0/webiste.git
+cd webiste
 
 # Install dependencies
 npm install
