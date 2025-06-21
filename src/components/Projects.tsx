@@ -1,3 +1,4 @@
+// src/components/Projects.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
@@ -24,7 +25,7 @@ export default function Projects() {
         <h2 className="text-4xl font-heading text-center text-accentDark mb-12">
           Projects
         </h2>
-        <div className="grid grid-cols-1 sm	grid-cols-2 gap-8 justify-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
           {projects.map((p, i) => (
             <motion.div
               key={i}
@@ -35,7 +36,9 @@ export default function Projects() {
               transition={{ duration: 0.6, delay: i * 0.2 }}
             >
               <div>
-                <h3 className="font-heading text-2xl text-accentDark mb-1">{p.title}</h3>
+                <h3 className="font-heading text-2xl text-accentDark mb-1">
+                  {p.title}
+                </h3>
                 <p className="text-sm text-gray-500">{p.period}</p>
               </div>
               <div className="flex-grow overflow-auto mt-4 mb-4">
@@ -56,5 +59,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-     );                        
-    }             
+  );
+}

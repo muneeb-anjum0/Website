@@ -1,4 +1,3 @@
-// src/components/NavBar.tsx
 import React from 'react';
 import { Link } from 'react-scroll';
 
@@ -7,8 +6,8 @@ const sections = ['home','education','experience','projects','skills','contact']
 export default function NavBar() {
   return (
     <nav className="fixed inset-x-0 top-0 z-50 bg-transparent">
-      <div className="container mx-auto flex items-center justify-between py-3 px-6 backdrop-blur-sm">
-        {/* Logo / Name now clickable */}
+      <div className="container mx-auto flex flex-wrap items-center justify-between py-3 px-4 md:px-6 backdrop-blur-sm">
+        {/* Logo / Name */}
         <Link
           to="home"
           spy
@@ -39,8 +38,8 @@ export default function NavBar() {
           ))}
         </ul>
 
-        {/* Mobile Menu */}
-        <ul className="flex md:hidden space-x-4">
+        {/* Mobile Menu: wraps into two rows so all tabs remain visible */}
+        <ul className="flex flex-wrap md:hidden w-full justify-center gap-4 mt-2">
           {sections.map(sec => (
             <li key={sec}>
               <Link
