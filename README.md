@@ -6,7 +6,7 @@ A single‐page, responsive portfolio built with **React**, **TypeScript**, **Vi
 
 ## 🚀 Live Demo
 
-🔗 https://muneeb-anjum0.github.io/Website/  
+🔗 https://muneeb-anjum0.github.io/website/  
 
 ---
 
@@ -119,8 +119,8 @@ my-react-app/
 
 ```
 # Clone the repo
-git clone https://github.com/muneeb-anjum0/Website.git
-cd Website
+git clone https://github.com/muneeb-anjum0/website.git
+cd website
 
 # Install dependencies
 npm install
@@ -137,7 +137,7 @@ Deploying to GitHub Pages
 Configure package.json:
 
 {
-  "homepage": "https://muneeb-anjum0.github.io/YourRepoName",
+  "homepage": "https://muneeb-anjum0.github.io/website",
   "scripts": {
     "predeploy": "npm run build",
     "deploy":   "gh-pages -d dist"
