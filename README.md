@@ -1,4 +1,4 @@
-# Muneeb Anjum’s Portfolio Website
+# Portfolio Website
 
 A single‐page, responsive portfolio built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**, featuring a custom animated “threads” background, smooth scroll navigation, timeline sections for education & experience, a projects showcase, skills badges, and a contact footer.
 
@@ -6,7 +6,7 @@ A single‐page, responsive portfolio built with **React**, **TypeScript**, **Vi
 
 ## 🚀 Live Demo
 
-🔗 https://muneeb-anjum0.github.io/website/  
+🔗 https://muneeb-anjum0.github.io/Website/  
 
 ---
 
@@ -119,8 +119,8 @@ my-react-app/
 
 ```
 # Clone the repo
-git clone https://github.com/muneeb-anjum0/webiste.git
-cd webiste
+git clone https://github.com/muneeb-anjum0/Website.git
+cd Website
 
 # Install dependencies
 npm install
