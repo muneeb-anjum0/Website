@@ -1,4 +1,3 @@
-// src/components/Projects.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
@@ -20,7 +19,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 px-4 bg-white">
+    <section
+      id="projects"
+      className="py-16 px-4 bg-accentGray"
+    >
       <div className="container mx-auto max-w-4xl">
         <h2 className="text-4xl font-heading text-center text-accentDark mb-12">
           Projects

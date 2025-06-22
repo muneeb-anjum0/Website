@@ -1,15 +1,20 @@
+/* src/index.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Base: pure white + dark text */
 @layer base {
   body {
     @apply bg-white text-accentDark;
   }
-  /* make all sections & cards transparent */
-  section,
-  .card {
-    background-color: transparent !important;
+
+  /* Translucent, borderless section panels */
+  section > .container {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    box-shadow: none;
+    padding: 2rem;
   }
 }
