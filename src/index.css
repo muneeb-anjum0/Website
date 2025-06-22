@@ -8,8 +8,10 @@
     @apply bg-white text-accentDark;
   }
 
-  /* Extra-transparent, borderless section panels */
+  /* Clamp between 20rem (min), 90% of viewport, and 48rem (max) */
   section > .container {
+    max-width: clamp(20rem, 90%, 48rem);
+    margin-inline: auto;
     background-color: rgba(255, 255, 255, 0.5) !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
