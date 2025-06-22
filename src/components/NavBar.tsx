@@ -11,19 +11,19 @@ export default function NavBar() {
   return (
     <nav className="fixed inset-x-0 top-0 z-50 bg-transparent">
       <div className="container mx-auto flex items-center justify-between py-3 px-4 md:px-6">
-        {/* Logo / Name */}
+        {/* Logo */}
         <Link
           to="home"
           spy
           smooth
           offset={-80}
           duration={500}
-          className="font-heading text-2xl text-accentDark tracking-widest cursor-pointer"
+          className="font-heading text-2xl text-accentDark cursor-pointer"
         >
           MUNEEB
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop */}
         <ul className="hidden md:flex space-x-8">
           {sections.map(sec => (
             <li key={sec}>
@@ -33,16 +33,16 @@ export default function NavBar() {
                 smooth
                 offset={-80}
                 duration={500}
-                className="group font-heading uppercase text-sm text-accentDark tracking-wide hover:text-accentBlue transition cursor-pointer"
+                className="group font-heading uppercase text-sm text-accentDark hover:text-accentBlue transition"
               >
                 {sec}
-                <span className="block h-0.5 bg-accentBlue scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-200" />
+                <span className="block h-0.5 bg-accentBlue scale-x-0 group-hover:scale-x-100 origin-left transition-transform" />
               </Link>
             </li>
           ))}
         </ul>
 
-        {/* Mobile Hamburger */}
+        {/* Mobile toggle */}
         <button
           className="md:hidden text-accentDark focus:outline-none"
           onClick={() => setOpen(o => !o)}
@@ -52,30 +52,31 @@ export default function NavBar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile menu panel */}
       <div
-        className={`md:hidden absolute top-full inset-x-0 bg-white bg-opacity-90 backdrop-blur-sm transition-transform origin-top ${
-          open ? 'scale-y-100' : 'scale-y-0'
-        }`}
+        className={`md:hidden absolute top-full inset-x-2 transform transition ease-out duration-200
+          ${open ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}`}
         style={{ transformOrigin: 'top' }}
       >
-        <ul className="flex flex-col items-center space-y-4 py-4">
-          {sections.map(sec => (
-            <li key={sec}>
-              <Link
-                to={sec}
-                spy
-                smooth
-                offset={-80}
-                duration={500}
-                onClick={() => setOpen(false)}
-                className="font-body text-lg text-accentDark hover:text-accentBlue uppercase"
-              >
-                {sec}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="bg-white bg-opacity-50 backdrop-blur-sm rounded-xl shadow-lg p-4 mx-2">
+          <ul className="flex flex-col items-center space-y-4">
+            {sections.map(sec => (
+              <li key={sec}>
+                <Link
+                  to={sec}
+                  spy
+                  smooth
+                  offset={-80}
+                  duration={500}
+                  onClick={() => setOpen(false)}
+                  className="font-body text-lg text-accentDark hover:text-accentBlue uppercase"
+                >
+                  {sec}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );
