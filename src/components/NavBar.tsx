@@ -3,10 +3,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-const sections = ['home','education','experience','projects','skills','contact'] as const;
+const sections = ['home', 'education', 'experience', 'projects', 'skills', 'contact'] as const;
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
+  const logoSrc = import.meta.env.BASE_URL + 'viteBlack.png';
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 bg-transparent">
@@ -18,12 +19,12 @@ export default function NavBar() {
           smooth
           offset={-80}
           duration={500}
-          className="font-heading text-2xl text-accentDark cursor-pointer"
+          className="cursor-pointer"
         >
-          MUNEEB
+          <img src={logoSrc} alt="Logo" className="h-8 md:h-10" />
         </Link>
 
-        {/* Desktop */}
+        {/* Desktop menu */}
         <ul className="hidden md:flex space-x-8">
           {sections.map(sec => (
             <li key={sec}>
@@ -45,17 +46,18 @@ export default function NavBar() {
         {/* Mobile toggle */}
         <button
           className="md:hidden text-accentDark focus:outline-none"
-          onClick={() => setOpen(o => !o)}
+          onClick={() => setOpen(open => !open)}
           aria-label="Toggle menu"
         >
-          {open ? <FaTimes size={24}/> : <FaBars size={24}/>}
+          {open ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
       </div>
 
       {/* Mobile menu panel */}
       <div
-        className={`md:hidden absolute top-full inset-x-2 transform transition ease-out duration-200
-          ${open ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}`}
+        className={`md:hidden absolute top-full inset-x-2 transform transition ease-out duration-200 ${
+          open ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'
+        }`}
         style={{ transformOrigin: 'top' }}
       >
         <div className="bg-white bg-opacity-50 backdrop-blur-sm rounded-xl shadow-lg p-4 mx-2">
